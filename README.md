@@ -6,7 +6,7 @@
   <br />
 </p>
 
-<h2 align="center">laravel + svelte + inertia + vite</h2>
+<h2 align="center">laravel 9 + svelte + inertia + vite</h2>
 <pre><div align="center">npx @preset/cli apply alexdoffgit/lsiv</div></pre>
 
 <br />
