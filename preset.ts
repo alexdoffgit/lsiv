@@ -66,6 +66,7 @@ export default definePreset({
     });
 
     await editFiles({
+      title: "adding gulp task",
       files: "package.json",
       operations: {
         type: "edit-json",
