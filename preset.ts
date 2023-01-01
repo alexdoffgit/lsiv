@@ -1,6 +1,12 @@
 export default definePreset({
   name: "lsiv",
   options: {},
+  postInstall: ({ hl }) => [
+    `run vite server with ${hl("npm run dev")}`,
+    `run laravel dev server with ${hl(
+      "php artisan serve"
+    )} in seperate terminal`,
+  ],
   handler: async () => {
     await installPackages({
       title: "install inertia laravel side",
@@ -28,7 +34,7 @@ export default definePreset({
     });
 
     await editFiles({
-      title: "udpate route file",
+      title: "update route file",
       files: "routes/web.php",
       operations: [
         {
@@ -56,7 +62,7 @@ export default definePreset({
     await installPackages({
       title: "install client side dev dependency",
       for: "node",
-      packages: ["@sveltejs/vite-plugin-svelte", "svelte", "gulp", "execa"],
+      packages: ["@sveltejs/vite-plugin-svelte", "svelte"],
       dev: true,
     });
 
@@ -66,17 +72,13 @@ export default definePreset({
     });
 
     await editFiles({
-      title: "adding gulp task",
+      title: "turning json to module",
       files: "package.json",
       operations: {
         type: "edit-json",
         replace: (json, omit) => ({
           ...json,
           type: "module",
-          scripts: {
-            ...json.scripts,
-            "dev-all": "gulp",
-          },
         }),
       },
     });
