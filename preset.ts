@@ -72,6 +72,7 @@ export default definePreset({
         type: "edit-json",
         replace: (json, omit) => ({
           ...json,
+          type: "module",
           scripts: {
             ...json.scripts,
             "dev-all": "gulp",
