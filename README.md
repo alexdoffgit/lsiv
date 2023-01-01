@@ -6,13 +6,13 @@
   <br />
 </p>
 
-<h2 align="center">lsiv</h2>
-<pre><div align="center">npx @preset/cli apply username/lsiv</div></pre>
+<h2 align="center">laravel + svelte + inertia + vite</h2>
+<pre><div align="center">npx @preset/cli apply alexdoffgit/lsiv</div></pre>
 
 <br />
 
 <div align="center">
-  This preset was made by alexdoffgit.
+  This preset was made by Alexander Septian.
   <br />
   <br />
   <a href="https://preset.dev">Learn more</a>
