@@ -57,6 +57,7 @@ export default definePreset({
       title: "install client side dev dependency",
       for: "node",
       packages: ["@sveltejs/vite-plugin-svelte", "svelte", "gulp", "execa"],
+      dev: true,
     });
 
     await extractTemplates({
